@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101410">
+  <meta name="description" content="ARG420 — Comunidad, info y responsabilidad. Catálogo y pedidos por WhatsApp.">
+  <title>ARG420 | Comunidad, info y responsabilidad</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="ARG420 inicio">
+      <span class="brand-mark">ARG</span><span class="brand-number">420</span><span class="stars">★★★</span>
+    </a>
+    <button id="installBtn" class="install-btn hidden" type="button">Instalar app</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-kicker">🇦🇷 COMUNIDAD · INFO · RESPONSABILIDAD</div>
+      <h1>Bienvenidos a <span>ARG420</span></h1>
+      <p>Todo lo que necesitás para tu espacio de cultivo, en un solo lugar.</p>
+      <a class="button button-primary" href="#catalogo">Ver catálogo <span aria-hidden="true">↘</span></a>
+      <div class="hero-stamp">ARG<br><b>420</b></div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="section-heading">
+        <div><p class="eyebrow">ENCONTRÁ LO QUE BUSCÁS</p><h2>Catálogo</h2></div>
+        <span class="demo-tag">VERSIÓN DE PRUEBA</span>
+      </div>
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></label>
+      <div id="categoryFilters" class="filters" aria-label="Filtrar por categoría"></div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="emptyMessage" class="empty hidden">No encontramos productos con esa búsqueda.</p>
+      <p class="small-note">Los productos y precios de esta versión son ejemplos para probar la app. Reemplazalos antes de compartirla con clientes.</p>
+    </section>
+
+    <section class="community section" id="comunidad">
+      <p class="eyebrow">MÁS QUE UNA TIENDA</p>
+      <h2>La comunidad <span>ARG420</span></h2>
+      <p>Novedades, información y responsabilidad. Próximamente podremos sumar publicaciones y recursos de la comunidad.</p>
+      <a class="button button-outline" id="communityWhatsApp" href="#" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+    </section>
+
+    <section class="cart-panel section" id="pedido">
+      <div class="section-heading">
+        <div><p class="eyebrow">TU SELECCIÓN</p><h2>Mi pedido <span id="cartCount" class="count-pill">0</span></h2></div>
+        <button id="clearCartBtn" class="text-button" type="button">Vaciar</button>
+      </div>
+      <div id="cartItems" class="cart-items"><p class="muted">Todavía no agregaste productos.</p></div>
+      <div class="cart-total"><span>Total estimado</span><strong id="cartTotal">$0</strong></div>
+      <p class="small-note">El pedido se envía para consultar disponibilidad y confirmar el precio final. No se realiza ningún pago dentro de esta app.</p>
+      <button id="checkoutBtn" class="button button-primary full-width" type="button" disabled>Preparar pedido por WhatsApp</button>
+      <p id="checkoutHint" class="form-hint">Agregá un producto para preparar tu pedido.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <a href="#inicio"><span>⌂</span>Inicio</a>
+    <a href="#catalogo"><span>▦</span>Catálogo</a>
+    <a href="#pedido"><span>＋</span>Mi pedido</a>
+    <a href="#comunidad"><span>◎</span>Comunidad</a>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-brand">ARG420 <span>★★★</span></div>
+    <p>Comunidad, info y responsabilidad.</p>
+    <p class="small-note">Venta sujeta a disponibilidad y normativa aplicable. Solo productos cuya comercialización esté permitida.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
